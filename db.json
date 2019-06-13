@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "task 1",
+      "details": {
+        "author": "author 1",
+        "assignee": "assignee 1",
+        "description": "description 1",
+        "priority": "priority 1"
+      }
+    },
+    {
+      "id": 2,
+      "title": "task 2",
+      "details": {
+        "author": "author 2",
+        "assignee": "assignee 2",
+        "description": "description 2",
+        "priority": "priority 2"
+      }
+    },
+    {
+      "id": 3,
+      "title": "task 3",
+      "details": {
+        "author": "author 3",
+        "assignee": "assignee 3",
+        "description": "description 3",
+        "priority": "priority 3"
+      }
+    }
+  ]
+}

@@ -1,3 +1,30 @@
-<h3>there will be form to edit task</h3>
+<h3>Edit task</h3>
+<form [formGroup]="taskForm" (ngSubmit)="save(taskForm)">
+    <div>
+        <label for="id">Id</label>
+        <input formControlName="id" type="text" id="id">
+    </div>
+    <div>
+        <label for="title">Title</label>
+        <input formControlName="title" type="text" id="title">
+    </div>
+    <div>
+        <label for="author">Author</label>
+        <input formControlName="author" type="text" id="author">
+    </div>
+    <div>
+        <label for="assignee">Assignee</label>
+        <input formControlName="assignee" type="text" id="assignee">
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input formControlName="description" type="text" id="description">
+    </div>
+    <div>
+        <label for="priority">Priority</label>
+        <input formControlName="priority" type="text" id="priority">
+    </div>
+    <button>SAVE</button>
+</form>
+
 <button (click)="goBack()">BACK</button>
-<button (click)="goBack()">SAVE</button>

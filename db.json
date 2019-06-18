@@ -1,34 +1,36 @@
 {
   "tasks": [
     {
-      "id": 1,
       "title": "task 1",
-      "details": {
-        "author": "author 1",
-        "assignee": "assignee 1",
-        "description": "description 1",
-        "priority": "priority 1"
-      }
+      "author": "l",
+      "assignee": "l",
+      "description": "l",
+      "priority": "l",
+      "id": 5
     },
     {
-      "id": 2,
-      "title": "task 2",
-      "details": {
-        "author": "author 2",
-        "assignee": "assignee 2",
-        "description": "description 2",
-        "priority": "priority 2"
-      }
+      "title": "kl;kl;",
+      "author": "kl;k",
+      "assignee": "l;k",
+      "description": "l;k",
+      "priority": "l;k",
+      "id": 6
     },
     {
-      "id": 3,
-      "title": "task 3",
-      "details": {
-        "author": "author 3",
-        "assignee": "assignee 3",
-        "description": "description 3",
-        "priority": "priority 3"
-      }
+      "title": "p[p[",
+      "author": "p[p[",
+      "assignee": "p[p[",
+      "description": "p[p",
+      "priority": "[p",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "title": "one task bew",
+      "author": "authir",
+      "assignee": "ass",
+      "description": "description 1",
+      "priority": "pri"
     }
   ]
 }

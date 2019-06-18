@@ -1,8 +1,8 @@
 <ul>
   <li *ngFor="let task of (tasks | async)">
-    {{ task.title }} {{ task.details.description }}
+    <span (click)="openInfoDialog(task)">{{ task.id }} - {{ task.title }}</span>
     <button [routerLink]="['edit', task.id]">Edit</button>
-    <button>Delete</button>
+    <button (click)="openDeleteDialog(task.id)">Delete</button>
   </li>
 </ul>
 

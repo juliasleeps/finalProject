@@ -1,0 +1,10 @@
+li {
+    color: blue;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20;
+    padding: 20;
+  }

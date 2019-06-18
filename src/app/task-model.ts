@@ -1,10 +1,11 @@
 export class TaskModel {
-    id: number;
-    title: string;
-    details: {
-        author: string;
-        assignee: string;
-        description: string;
-        priority: string;
+    constructor(
+        public id: string,
+        public title: string,
+        public author: string,
+        public assignee: string,
+        public description: string,
+        public priority: string
+    ){
     }
 }

@@ -38,7 +38,11 @@ export class HomePageComponent implements OnInit {
 
   openDeleteDialog(id: string): void {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
-      width: '250px'
+      height: '200px',
+      width: '300px',
+      data: {
+        id: id
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -50,7 +54,8 @@ export class HomePageComponent implements OnInit {
 
   openInfoDialog(val: TaskModel): void {
     const dialogRef = this.dialog.open(TaskInfoDialogComponent, {
-      width: '250px',
+      height: '300px',
+      width: '300px',
       data: {
         id: val.id,
         title: val.title,

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 import { TaskInfoDialogComponent } from './task-info-dialog/task-info-dialog.component';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { UnsavedDialogComponent } from './unsaved-dialog/unsaved-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     EditComponent,
     CreateComponent,
     TaskInfoDialogComponent,
-    DeleteDialogComponent
+    DeleteDialogComponent,
+    UnsavedDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,11 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     BrowserAnimationsModule
   ],
   providers: [],
-  entryComponents: [TaskInfoDialogComponent, DeleteDialogComponent],
+  entryComponents: [
+    TaskInfoDialogComponent,
+    DeleteDialogComponent,
+    UnsavedDialogComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

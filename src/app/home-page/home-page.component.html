@@ -1,8 +1,22 @@
+<input
+  type="text"
+  #search
+  (keyup)="searchTask(search)"
+  placeholder="Search for tasks.."
+/>
 <ul class="list-group">
-  <li *ngFor="let task of (tasks | async)" class="list-group-item">
-    <span (click)="openInfoDialog(task)">{{ task.id }} - {{ task.title }}</span>
-    <button [routerLink]="['edit', task.id]" class="btn btn-default">Edit</button>
-    <button (click)="openDeleteDialog(task.id)" class="btn btn-danger">Delete</button>
+  <li *ngFor="let task of tasks | async" class="list-group-item">
+    <span class="item" (click)="openInfoDialog(task)"
+      >{{ task.id }} - {{ task.title }}</span
+    >
+    <div class="buttons">
+      <button [routerLink]="['edit', task.id]" class="btn btn-default">
+        Edit
+      </button>
+      <button (click)="openDeleteDialog(task.id)" class="btn btn-danger">
+        Delete
+      </button>
+    </div>
   </li>
 </ul>
 

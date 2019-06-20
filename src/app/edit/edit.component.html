@@ -1,37 +1,70 @@
 <h3>Edit task</h3>
 <form [formGroup]="taskForm" (ngSubmit)="save(taskForm)">
-    <div class="form-group">
-        <label for="id">Id</label>
-        <input formControlName="id" type="text" id="id" class="form-control">
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input formControlName="id" type="text" id="id" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="title">*Title</label>
+    <input
+      formControlName="title"
+      type="text"
+      id="title"
+      class="form-control"
+    />
+    <div
+      *ngIf="
+        !taskForm.controls['title'].valid && taskForm.controls['title'].touched
+      "
+      class="errorMessage"
+    >
+      Title is required
     </div>
-    <div class="form-group">
-        <label for="title">*Title</label>
-        <input formControlName="title" type="text" id="title" class="form-control">
-        <div *ngIf="!taskForm.controls['title'].valid && taskForm.controls['title'].touched"
-            class="errorMessage">
-            Title is required
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input
+      formControlName="author"
+      type="text"
+      id="author"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="assignee">Assignee</label>
+    <input
+      formControlName="assignee"
+      type="text"
+      id="assignee"
+      class="form-control"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">*Description</label>
+    <input
+      formControlName="description"
+      type="text"
+      id="description"
+      class="form-control"
+    />
+    <div
+      *ngIf="
+        !taskForm.controls['description'].valid &&
+        taskForm.controls['description'].touched
+      "
+      class="errorMessage"
+    >
+      Description is required
     </div>
-    <div class="form-group">
-        <label for="author">Author</label>
-        <input formControlName="author" type="text" id="author" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="assignee">Assignee</label>
-        <input formControlName="assignee" type="text" id="assignee" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="description">*Description</label>
-        <input formControlName="description" type="text" id="description" class="form-control">
-        <div *ngIf="!taskForm.controls['description'].valid && taskForm.controls['description'].touched"
-            class="errorMessage">
-            Description is required
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="priority">Priority</label>
-        <input formControlName="priority" type="text" id="priority" class="form-control">
-    </div>
-    <button [disabled]="!taskForm.valid" class="btn btn-primary">SAVE</button>
+  </div>
+  <div class="form-group">
+    <label for="priority">Priority</label>
+    <select class="form-control" id="priority" formControlName="priority">
+      <option *ngFor="let priority of priorities" [ngValue]="priority">
+        {{ priority }}
+      </option>
+    </select>
+  </div>
+  <button [disabled]="!taskForm.valid" class="btn btn-primary">SAVE</button>
+  <button (click)="openUnsavedDialog()" class="btn btn-default">BACK</button>
 </form>
-<button (click)="openUnsavedDialog()" class="btn btn-default">BACK</button>

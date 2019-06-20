@@ -1,10 +1,32 @@
 li {
-    color: blue;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.item {
+  cursor: pointer;
 }
 
 ul {
-    list-style-type: none;
-    margin: 20;
-    padding: 20;
-  }
+  list-style-type: none;
+  width: 100%;
+}
+
+.list-group {
+  width: 600px;
+}
+
+.buttons {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: inline-block;
+}
+
+input {
+  margin-bottom: 5px;
+}
